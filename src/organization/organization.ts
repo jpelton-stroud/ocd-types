@@ -4,6 +4,7 @@ import {
     Identifier,
     Link,
     OtherName,
+    Post,
 } from "../shared/shared";
 
 type Classification =
@@ -24,7 +25,7 @@ interface IOrganization extends CommonMetadata {
     parent_id?: null | string;
     contact_details?: ContactDetail[];
     links?: Link[];
-    posts?: unknown[];
+    posts?: Post[];
     image?: null | string;
     founding_date?: null | string;
     dissolution_date?: null | string;
@@ -39,7 +40,7 @@ export class Organization implements IOrganization {
     parent_id: null | string;
     contact_details: ContactDetail[];
     links: Link[];
-    posts: unknown[];
+    posts: Post[];
     image: null | string;
     founding_date: null | string;
     dissolution_date: null | string;
