@@ -1,3 +1,5 @@
+export { Post } from "../post/post";
+
 export class Link {
     url: string;
     note?: string | null;
