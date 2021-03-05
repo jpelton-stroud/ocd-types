@@ -1,4 +1,10 @@
-import { Link, Identifier, CommonMetadata } from "../shared/shared";
+import {
+    Link,
+    Identifier,
+    CommonMetadata,
+    ContactDetail,
+    OtherName,
+} from "../shared/shared";
 
 interface IPerson extends CommonMetadata {
     name: string;
@@ -18,20 +24,6 @@ interface IPerson extends CommonMetadata {
     identifiers?: Identifier[];
     other_names?: OtherName[];
 }
-
-type ContactDetail = {
-    name: string;
-    note: null | string;
-    start_date: null | string;
-    end_date: null | string;
-};
-
-type OtherName = {
-    name: string;
-    note: null | string;
-    start_date: null | string;
-    end_date: null | string;
-};
 
 export class Person {
     name: string;
