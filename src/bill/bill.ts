@@ -1,5 +1,7 @@
 // https://opencivicdata.readthedocs.io/en/latest/data/bill.html
 
+import { CommonMetadata, Link } from "../shared/shared";
+
 type BillSummary = {
     note: string | null;
     text: string;
@@ -23,20 +25,10 @@ type RelatedBill = {
 
 type Chamber = "upper" | "lower" | "joint";
 
-class Source {
-    url: string;
-    note?: string | null;
-    constructor(url: string, note: string = null) {
-        this.note = note ? note : null;
-        this.url = url;
-    }
-}
-
-interface IBill {
+interface IBill extends CommonMetadata {
     session: string;
     name: string;
     title: string;
-    sources: Source[];
 
     organization?: string | null;
     organization_id?: string | null;
@@ -44,9 +36,6 @@ interface IBill {
     type?: string[];
     subject?: string[];
     summaries?: BillSummary[];
-
-    updated_at?: string;
-    created_at?: string;
 
     other_titles?: OtherTitle[];
     other_names?: OtherName[];
@@ -59,13 +48,13 @@ interface IBill {
     versions?: BillVersion[];
 }
 
-class Bill implements IBill {
+export class Bill implements IBill {
     readonly _type: string = "bill";
 
     name: string;
     session: string;
     title: string;
-    sources: Source[];
+    sources: Link[];
 
     organization: string | null;
     organization_id: string | null;
@@ -87,31 +76,29 @@ class Bill implements IBill {
     documents: BillVersion[];
     versions: BillVersion[];
 
-    constructor(bill: IBill) {
-        this.name = bill.name;
-        this.session = bill.session;
-        this.title = bill.title;
-        if (bill.sources.length > 0) this.sources = bill.sources;
+    constructor(d: IBill) {
+        this.name = d.name;
+        this.session = d.session;
+        this.title = d.title;
+        if (d.sources.length > 0) this.sources = d.sources;
         else throw new Error("Must include at least one source URL");
 
-        this.organization = bill.organization ? bill.organization : null;
-        this.organization_id = bill.organization_id
-            ? bill.organization_id
-            : null;
-        this.chamber = bill.chamber ? bill.chamber : null;
-        this.type = bill.type ? bill.type : [];
-        this.subject = bill.subject ? bill.subject : [];
-        this.summaries = bill.summaries ? bill.summaries : [];
-        this.other_titles = bill.other_titles ? bill.other_titles : [];
-        this.other_names = bill.other_names ? bill.other_names : [];
-        this.related_bills = bill.related_bills ? bill.related_bills : [];
-        this.sponsors = bill.sponsors ? bill.sponsors : [];
-        this.actions = bill.actions ? bill.actions : [];
-        this.documents = bill.documents ? bill.documents : [];
-        this.versions = bill.versions ? bill.versions : [];
+        this.organization = d.organization ? d.organization : null;
+        this.organization_id = d.organization_id ? d.organization_id : null;
+        this.chamber = d.chamber ? d.chamber : null;
+        this.type = d.type ? d.type : [];
+        this.subject = d.subject ? d.subject : [];
+        this.summaries = d.summaries ? d.summaries : [];
+        this.other_titles = d.other_titles ? d.other_titles : [];
+        this.other_names = d.other_names ? d.other_names : [];
+        this.related_bills = d.related_bills ? d.related_bills : [];
+        this.sponsors = d.sponsors ? d.sponsors : [];
+        this.actions = d.actions ? d.actions : [];
+        this.documents = d.documents ? d.documents : [];
+        this.versions = d.versions ? d.versions : [];
 
-        this.updated_at = bill.updated_at ? bill.updated_at : null;
-        this.created_at = bill.created_at ? bill.created_at : null;
+        this.updated_at = d.updated_at ? d.updated_at : null;
+        this.created_at = d.created_at ? d.created_at : null;
     }
 }
 
