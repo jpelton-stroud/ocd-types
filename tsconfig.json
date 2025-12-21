@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": ["esnext", "dom"],
+    "target": "esnext",
+    "noEmit": true, // We don't want to generate JS
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  }
+}
