@@ -11,7 +11,7 @@ export type Bill = {
   identifier: string;
   title: string;
   classification: string[];
-  subject: [];
+  subject: unknown[];
   extras: Extras;
   created_at: string;
   updated_at: string;
@@ -29,7 +29,7 @@ export type Bill = {
     abstract: string;
     note: string;
   }[];
-  other_titles?: [];
+  other_titles?: unknown[];
   other_identifiers?: Identifier[];
   sponsorships?: {
     id: string;
@@ -41,5 +41,5 @@ export type Bill = {
     classification?: string;
   }[];
   sources?: Link[];
-  versions?: [];
+  versions?: unknown[];
 };
