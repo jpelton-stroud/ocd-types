@@ -1,7 +1,7 @@
 import { Extras, Identifier, Link, Role } from "./common.js";
 import { Jurisdiction } from "./jurisdiction.js";
 
-export interface Person {
+export type Person = {
   id: string;
   name: string;
   party: string;
@@ -32,4 +32,4 @@ export interface Person {
     address: string;
     classification: string;
   }[];
-}
+};

@@ -3,7 +3,7 @@ import { Jurisdiction } from "./jurisdiction.js";
 import { Organization } from "./organization.js";
 import { Person } from "./person.js";
 
-export interface Bill {
+export type Bill = {
   id: string;
   session: string;
   jurisdiction: Jurisdiction;
@@ -42,4 +42,4 @@ export interface Bill {
   }[];
   sources?: Link[];
   versions?: [];
-}
+};

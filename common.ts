@@ -1,20 +1,20 @@
-export interface Link {
+export type Link = {
   url: string;
   note: string;
-}
+};
 
-export interface Identifier {
+export type Identifier = {
   identifier: string;
   scheme: string;
-}
+};
 
-export interface Extras {
+export type Extras = {
   [key: string]: string;
-}
+};
 
-export interface Role {
+export type Role = {
   title: string;
   org_classification: string;
   district: string;
   division_id: string;
-}
+};

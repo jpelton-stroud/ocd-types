@@ -1,7 +1,7 @@
 import { LegislativeSession } from "./legislative_session.js";
 import { Organization } from "./organization.js";
 
-export interface Jurisdiction {
+export type Jurisdiction = {
   id: string;
   name: string;
   classification: "country" | "state" | "municipality";
@@ -16,4 +16,4 @@ export interface Jurisdiction {
     start_time: string;
     end_time: string;
   }[];
-}
+};

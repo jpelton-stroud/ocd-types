@@ -1,4 +1,4 @@
-export interface LegislativeSession {
+export type LegislativeSession = {
   identifier: string;
   name: string;
   classification: string;
@@ -10,4 +10,4 @@ export interface LegislativeSession {
     created_at: string;
     updated_at: string;
   }[];
-}
+};
