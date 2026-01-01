@@ -3,6 +3,7 @@ import { Document, Extras, Link, Media } from "./common.js";
 import { JurisdictionStub } from "./jurisdiction.js";
 import { OrganizationStub } from "./organization.js";
 import { PersonStub } from "./person.js";
+import { VoteEventStub } from "./vote_event.js";
 
 export type EventStub = {
   id: string;
@@ -48,7 +49,7 @@ export interface Event extends EventStub {
       person?: PersonStub;
       organization?: OrganizationStub;
       bill?: BillStub;
-      vote?: {};
+      vote?: VoteEventStub;
     }[];
     media: Media[];
   }[];
