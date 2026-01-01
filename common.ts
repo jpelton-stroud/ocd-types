@@ -1,18 +1,18 @@
-export interface OpenStatesLink {
+export interface Link {
   url: string;
   note: string;
 }
 
-export interface OpenStatesIdentifier {
+export interface Identifier {
   identifier: string;
   scheme: string;
 }
 
-export interface OpenStatesExtras {
+export interface Extras {
   [key: string]: string;
 }
 
-export interface OpenStatesRole {
+export interface Role {
   title: string;
   org_classification: string;
   district: string;

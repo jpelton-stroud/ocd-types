@@ -1,22 +1,18 @@
-import {
-  OpenStatesExtras,
-  OpenStatesIdentifier,
-  OpenStatesLink,
-} from "./common.js";
-import { OpenStatesJurisdiction } from "./jurisdiction.js";
-import { OpenStatesOrganization } from "./organization.js";
-import { OpenStatesPerson } from "./person.js";
+import { Extras, Identifier, Link } from "./common.js";
+import { Jurisdiction } from "./jurisdiction.js";
+import { Organization } from "./organization.js";
+import { Person } from "./person.js";
 
-export interface OpenStatesBill {
+export interface Bill {
   id: string;
   session: string;
-  jurisdiction: OpenStatesJurisdiction;
-  from_organization: OpenStatesOrganization;
+  jurisdiction: Jurisdiction;
+  from_organization: Organization;
   identifier: string;
   title: string;
   classification: string[];
   subject: [];
-  extras: OpenStatesExtras;
+  extras: Extras;
   created_at: string;
   updated_at: string;
   openstates_url: string;
@@ -34,16 +30,16 @@ export interface OpenStatesBill {
     note: string;
   }[];
   other_titles?: [];
-  other_identifiers?: OpenStatesIdentifier[];
+  other_identifiers?: Identifier[];
   sponsorships?: {
     id: string;
     name: string;
     entity_type: "person" | "organization";
-    person?: OpenStatesPerson;
-    organization?: OpenStatesOrganization;
+    person?: Person;
+    organization?: Organization;
     primary?: boolean;
     classification?: string;
   }[];
-  sources?: OpenStatesLink[];
+  sources?: Link[];
   versions?: [];
 }

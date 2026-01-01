@@ -1,4 +1,4 @@
-export interface OpenStatesLegislativeSession {
+export interface LegislativeSession {
   identifier: string;
   name: string;
   classification: string;

@@ -1,7 +1,7 @@
-import { OpenStatesLegislativeSession } from "./legislative_session.js";
-import { OpenStatesOrganization } from "./organization.js";
+import { LegislativeSession } from "./legislative_session.js";
+import { Organization } from "./organization.js";
 
-export interface OpenStatesJurisdiction {
+export interface Jurisdiction {
   id: string;
   name: string;
   classification: "country" | "state" | "municipality";
@@ -9,8 +9,8 @@ export interface OpenStatesJurisdiction {
   url?: string;
   latest_bill_update?: string;
   latest_people_update?: string;
-  organizations?: OpenStatesOrganization[];
-  legislative_sessions?: OpenStatesLegislativeSession[];
+  organizations?: Organization[];
+  legislative_sessions?: LegislativeSession[];
   latest_runs?: {
     success: boolean;
     start_time: string;

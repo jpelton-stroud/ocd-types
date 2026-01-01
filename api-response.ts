@@ -1,4 +1,4 @@
-export interface OpenStatesResponse<T> {
+export interface Response<T> {
   results: T[];
   pagination: {
     per_page: number;
