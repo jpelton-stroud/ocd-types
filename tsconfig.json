@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "lib": ["esnext", "dom"],
-    "target": "esnext",
-    "noEmit": true, // We don't want to generate JS
-    "forceConsistentCasingInFileNames": true,
-    "strict": true
-  }
+    "module": "NodeNext", // Modern standard
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "declaration": true, // Auto-generate .d.ts files
+    "noEmit": false, // Allow file generation
+    "outDir": "./dist", // Output to dist/
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["*.ts"] // Look for .ts source files
 }

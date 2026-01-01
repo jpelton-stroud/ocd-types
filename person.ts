@@ -3,8 +3,8 @@ import {
   OpenStatesIdentifier,
   OpenStatesLink,
   OpenStatesRole,
-} from "./common";
-import { OpenStatesJurisdiction } from "./jurisdiction";
+} from "./common.js";
+import { OpenStatesJurisdiction } from "./jurisdiction.js";
 
 export interface OpenStatesPerson {
   id: string;

@@ -1,5 +1,5 @@
-import { OpenStatesLegislativeSession } from "./legislative_session";
-import { OpenStatesOrganization } from "./organization";
+import { OpenStatesLegislativeSession } from "./legislative_session.js";
+import { OpenStatesOrganization } from "./organization.js";
 
 export interface OpenStatesJurisdiction {
   id: string;

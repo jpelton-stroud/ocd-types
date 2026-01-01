@@ -2,10 +2,10 @@ import {
   OpenStatesExtras,
   OpenStatesIdentifier,
   OpenStatesLink,
-} from "./common";
-import { OpenStatesJurisdiction } from "./jurisdiction";
-import { OpenStatesOrganization } from "./organization";
-import { OpenStatesPerson } from "./person";
+} from "./common.js";
+import { OpenStatesJurisdiction } from "./jurisdiction.js";
+import { OpenStatesOrganization } from "./organization.js";
+import { OpenStatesPerson } from "./person.js";
 
 export interface OpenStatesBill {
   id: string;

@@ -1,15 +1,21 @@
 {
   "name": "opencivicdata-types",
-  "version": "0.2.4",
-  "description": "Typescript definitions for working with the Open Civic Data schema",
-  "main": "",
-  "types": "index.d.ts",
+  "version": "0.2.5",
+  "description": "TypeScript definitions for Open Civic Data",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "*.d.ts",
-    "README.md",
-    "LICENSE"
+    "dist"
   ],
   "scripts": {
-    "test": "npx tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   }
 }
