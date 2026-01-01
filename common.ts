@@ -26,3 +26,7 @@ export type Document = {
   classification: string;
   links: Link[];
 };
+
+export interface Media extends Document {
+  offset: number;
+}

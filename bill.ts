@@ -1,15 +1,18 @@
 import { Document, Extras, Identifier, Link } from "./common.js";
-import { Jurisdiction } from "./jurisdiction.js";
-import { Organization, OrganizationStub } from "./organization.js";
-import { Person, PersonStub } from "./person.js";
+import { JurisdictionStub } from "./jurisdiction.js";
+import { OrganizationStub } from "./organization.js";
+import { PersonStub } from "./person.js";
 
-export type Bill = {
+export type BillStub = {
   id: string;
   session: string;
-  jurisdiction: Jurisdiction;
-  from_organization: Organization;
   identifier: string;
   title: string;
+};
+
+export interface Bill {
+  jurisdiction: JurisdictionStub;
+  from_organization: OrganizationStub;
   classification: string[];
   subject: unknown[];
   extras: Extras;
@@ -37,8 +40,8 @@ export type Bill = {
     entity_type: "person" | "organization";
     primary: boolean;
     classification: string;
-    person?: Person;
-    organization?: Organization;
+    person?: PersonStub;
+    organization?: OrganizationStub;
   }[];
   actions: {
     id: string;
@@ -57,5 +60,20 @@ export type Bill = {
   sources?: Link[];
   versions?: Document[];
   documents?: Document[];
-  votes?: unknown[];
-};
+  votes?: {
+    id: string;
+    motion_text: string;
+    motion_classification: string[];
+    start_date: string;
+    result: string;
+    identifier: string;
+    extras: Extras;
+    organization: OrganizationStub;
+    votes: {
+      id: string;
+      option: string;
+      voter_name: string;
+      voter: PersonStub;
+    }[];
+  }[];
+}

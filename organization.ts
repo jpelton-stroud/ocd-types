@@ -5,5 +5,10 @@ export type OrganizationStub = {
 };
 
 export interface Organization extends OrganizationStub {
-  districts?: [];
+  districts?: {
+    label: string;
+    role: string;
+    division_id: string;
+    maximum_memberships: number;
+  }[];
 }

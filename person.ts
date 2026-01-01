@@ -1,5 +1,5 @@
 import { Extras, Identifier, Link, Role } from "./common.js";
-import { Jurisdiction } from "./jurisdiction.js";
+import { JurisdictionStub } from "./jurisdiction.js";
 
 export type PersonStub = {
   id: string;
@@ -9,7 +9,7 @@ export type PersonStub = {
 };
 
 export interface Person extends PersonStub {
-  jurisdiction: Jurisdiction;
+  jurisdiction: JurisdictionStub;
   given_name: string;
   family_name: string;
   image: string;
