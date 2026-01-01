@@ -9,5 +9,5 @@
     "strict": true,
     "esModuleInterop": true
   },
-  "include": ["*.ts"] // Look for .ts source files
+  "include": ["**/*.ts"] // Look for .ts source files
 }
