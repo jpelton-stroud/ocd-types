@@ -1,7 +1,7 @@
-import { Extras, Identifier, Link } from "./common.js";
+import { Document, Extras, Identifier, Link } from "./common.js";
 import { Jurisdiction } from "./jurisdiction.js";
-import { Organization } from "./organization.js";
-import { Person } from "./person.js";
+import { Organization, OrganizationStub } from "./organization.js";
+import { Person, PersonStub } from "./person.js";
 
 export type Bill = {
   id: string;
@@ -35,11 +35,27 @@ export type Bill = {
     id: string;
     name: string;
     entity_type: "person" | "organization";
+    primary: boolean;
+    classification: string;
     person?: Person;
     organization?: Organization;
-    primary?: boolean;
-    classification?: string;
+  }[];
+  actions: {
+    id: string;
+    organization: OrganizationStub;
+    description: string;
+    date: string;
+    classification: string[];
+    order: number;
+    related_entities?: {
+      name: string;
+      entity_type: string;
+      organization?: OrganizationStub;
+      person?: PersonStub;
+    }[];
   }[];
   sources?: Link[];
-  versions?: unknown[];
+  versions?: Document[];
+  documents?: Document[];
+  votes?: unknown[];
 };

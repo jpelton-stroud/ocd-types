@@ -18,3 +18,11 @@ export type Role = {
   district: string;
   division_id: string;
 };
+
+export type Document = {
+  id: string;
+  note: string;
+  date: string;
+  classification: string;
+  links: Link[];
+};

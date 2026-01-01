@@ -1,11 +1,14 @@
 import { Extras, Identifier, Link, Role } from "./common.js";
 import { Jurisdiction } from "./jurisdiction.js";
 
-export type Person = {
+export type PersonStub = {
   id: string;
   name: string;
   party: string;
   current_role: Role;
+};
+
+export interface Person extends PersonStub {
   jurisdiction: Jurisdiction;
   given_name: string;
   family_name: string;
@@ -32,4 +35,4 @@ export type Person = {
     address: string;
     classification: string;
   }[];
-};
+}
