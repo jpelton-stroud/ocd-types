@@ -12,10 +12,21 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"
-  }
+  },
+  "private": false,
+  "keywords": [
+    "ocd",
+    "types",
+    "opencivicdata",
+    "openstates"
+  ],
+  "author": "JPStroud",
+  "license": "ISC"
 }
