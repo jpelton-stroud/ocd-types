@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/jpelton-stroud/open-civic-data-types/compare/v1.0.0...v1.0.1) (2026-01-02)
+
+
+### Bug Fixes
+
+* add repository url for npm provenance ([dbcdab4](https://github.com/jpelton-stroud/open-civic-data-types/commit/dbcdab44161cac51f807f45d24aed0c10d5fd02e))
+
 # 1.0.0 (2026-01-02)
 
 
