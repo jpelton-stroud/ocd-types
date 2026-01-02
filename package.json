@@ -3,6 +3,9 @@
   "version": "0.2.5",
   "description": "TypeScript definitions for Open Civic Data schemas",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts"
@@ -26,5 +29,10 @@
     "openstates"
   ],
   "author": "JPStroud",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^25.0.2"
+  }
 }
