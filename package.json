@@ -6,6 +6,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpelton-stroud/open-civic-data-types.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts"
@@ -28,7 +32,7 @@
     "opencivicdata",
     "openstates"
   ],
-  "author": "JPStroud",
+  "author": "jpstroud",
   "license": "ISC",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
