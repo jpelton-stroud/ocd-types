@@ -1,6 +1,6 @@
 {
   "name": "@jpstroud/opencivicdata-types",
-  "version": "0.2.5",
+  "version": "1.0.0",
   "description": "TypeScript definitions for Open Civic Data schemas",
   "type": "module",
   "publishConfig": {
