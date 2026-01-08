@@ -10,7 +10,7 @@ export type BillStub = {
   title: string;
 };
 
-export interface Bill {
+export interface Bill extends BillStub {
   jurisdiction: JurisdictionStub;
   from_organization: OrganizationStub;
   classification: string[];
