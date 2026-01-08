@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/jpelton-stroud/open-civic-data-types/compare/v1.0.1...v1.0.2) (2026-01-08)
+
+
+### Bug Fixes
+
+* **bill:** interface Bill now properly extends BillStub ([2f48bf2](https://github.com/jpelton-stroud/open-civic-data-types/commit/2f48bf2789b6dd186a63222c346f7e50cb3cb6c6))
+
 ## [1.0.1](https://github.com/jpelton-stroud/open-civic-data-types/compare/v1.0.0...v1.0.1) (2026-01-02)
 
 
