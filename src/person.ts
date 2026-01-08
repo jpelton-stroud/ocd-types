@@ -21,7 +21,7 @@ export interface Person extends PersonStub {
   created_at: string;
   updated_at: string;
   openstates_url: string;
-  other_idenifiers?: Identifier[];
+  other_identifiers?: Identifier[];
   other_names?: {
     name: string;
     note: string;
